@@ -1,0 +1,13 @@
+*쉘을 쓸 때는 ./을 붙여서 위치를 알려줘야 함*
+GPU_동영상 분석 : darknet.exe detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights -ext_output test.mp4
+웹캠 분석 :          darknet.exe detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights -c 0
+
+
+GPU_동영상 분석(학습파일 사용) : darknet.exe detector demo data/obj.data data/yolo-obj.cfg backup/yolo-obj_last.weights -ext_output test2.mp4
+웹캠 분석(학습 파일 사용) :         darknet.exe detector demo data/obj.data data/yolo-obj.cfg backup/yolo-obj_last.weights -c 0
+
+
+동영상 분석_tiny : darknet.exe detector demo cfg/coco.data cfg/yolov3-tiny.cfg yolov3-tiny.weights test.mp4
+
+
+학습시키기 : darknet detector train data/obj.data yolo-obj.cfg darknet53.conv.74
